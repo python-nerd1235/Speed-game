@@ -2,3 +2,10 @@
 
 v0.1
 Made the first version of Speed Game! My best time is 9, see if you can beat that.
+
+v0.2
+Made loading maps thrugh json files. Added the first map in a json file.
+-----------
+==MAP MAKER LOG==
+v0.1
+Made it.
