@@ -1,13 +1,30 @@
 #speed game
-#v0.1
+#v0.2
 #by python-nerd1235
+F_V=0.2
 import pygame
-blocks=[[0,0],[450,400]]
-end=[450,0]
+import json
+import sys
+import os
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+try:
+    with open("level.json", encoding="utf-8") as file:
+        data = json.load(file)
+except FileNotFoundError:
+    print("failed to find level.json")
+    sys.exit()
+try:
+    blocks=data["B"]
+    end=[450,0]
+    #boom boom earth die if bad format
+    if data["F"]!=f"FORMAT {F_V}":3/0
+    
+except:
+    print("Bad format in level.json")
+    sys.exit()
 pygame.init()
 text_font = pygame.font.SysFont('Arial', 15)
 running = True
-hp=0
 x=0
 wIn=True
 y=400
